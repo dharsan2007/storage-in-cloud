@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Account | CloudVault</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="bg-glow"></div>
+
+<div class="card">
+  <div class="header">
+    <h2>Create Account</h2>
+    <p class="subtext">Secure your digital vault with identity verification.</p>
+  </div>
+
+  <div class="form-group">
+    <input id="regUser" type="text" placeholder="Username" required>
+    <input id="regName" type="text" placeholder="Full Name" required>
+    <input id="regEmail" type="email" placeholder="Email Address" required>
+  </div>
+
+  <div class="form-group">
+    <select id="regQuestion">
+      <option value="">Select Security Question</option>
+      <option>What was your first childhood hero?</option>
+      <option>In what city did you meet your best friend?</option>
+      <option>What was the name of your first pet?</option>
+    </select>
+    <input id="regAnswer" type="password" placeholder="Your secret answer">
+  </div>
+
+  <div class="password-box">
+    <input id="regPass" type="password" placeholder="Create Password" onkeyup="checkPasswordStrength()">
+    <div id="strength-bar"><div id="strength-fill"></div></div>
+    <input id="regConfirmPass" type="password" placeholder="Confirm Password">
+  </div>
+
+  <div class="verification-area">
+      <p class="label" style="color: var(--text-muted); margin-bottom: 0.5rem; font-size: 0.9rem;">Biometric & Profile Photo</p>
+      
+      <div class="upload-zone" id="dropZone">
+          <input type="file" id="faceUpload" accept="image/*" hidden>
+          <label for="faceUpload" class="upload-label">
+              <span id="uploadStatus">Click to Upload Face Scan</span>
+          </label>
+          <img id="facePreview" class="hidden" alt="Face Preview">
+      </div>
+  </div>
+
+  <div class="terms" style="margin-bottom: 1.5rem; display: flex; gap: 10px; align-items: center; font-size: 0.9rem; color: var(--text-muted);">
+    <input type="checkbox" id="termsAgree" style="width: auto; margin: 0;"> 
+    <span>I agree to the <a href="#">Terms of Service</a></span>
+  </div>
+
+  <button class="primary-btn" onclick="register()">Initialize Vault</button>
+  
+  <p class="subtext" style="margin-top: 1.5rem;">
+      Already a member? <a href="login.html">Sign In</a>
+  </p>
+</div>
+
+<input type="hidden" id="faceVerified" value="false">
+
+<script src="script.js"></script>
+</body>
+</html>

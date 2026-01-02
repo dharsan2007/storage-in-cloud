@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard | Cloud Portal</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="dashboard">
+
+  <!-- TOP NAVBAR (OLD STYLE) -->
+  <nav class="dash-nav">
+    <div class="left">
+      <img src="aws-logo.jpeg" class="logo">
+      <span class="brand">CloudAura</span>
+    </div>
+
+    <div class="right">
+      <!-- OLD UPLOAD BUTTON -->
+      <button class="upload-btn" onclick="window.location.href='upload.html'">
+        Upload File
+      </button>
+
+      <!-- UPDATED ADMIN (OLD TEXT → CLICKABLE ICON) -->
+      <span class="user admin-icon" onclick="toggleProfile()">👤</span>
+
+      <!-- PROFILE DROPDOWN (NEW) -->
+      <div id="profileBox" class="profile-box hidden">
+        <p class="profile-name" id="adminName">Admin User</p>
+        <p class="profile-email" id="adminEmail">admin@email.com</p>
+        <p class="profile-phone" id="adminPhone">+91 XXXXX XXXXX</p>
+        <hr>
+        <a href="auth.html">Logout</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT (UNCHANGED OLD CODE) -->
+  <section class="dash-content">
+    <h1>Your Cloud Files</h1>
+
+    <div class="file-grid">
+      <div class="file-card">
+        <h3>report.pdf</h3>
+        <p>PDF • 2 MB</p>
+      </div>
+
+      <div class="file-card">
+        <h3>image.png</h3>
+        <p>Image • 1.2 MB</p>
+      </div>
+
+      <div class="file-card">
+        <h3>project.zip</h3>
+        <p>ZIP • 10 MB</p>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
